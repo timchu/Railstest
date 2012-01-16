@@ -1,0 +1,21 @@
+<h1>Listing dragons</h1>
+
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @dragons.each do |dragon| %>
+  <tr>
+    <td><%= link_to 'Show', dragon %></td>
+    <td><%= link_to 'Edit', edit_dragon_path(dragon) %></td>
+    <td><%= link_to 'Destroy', dragon, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Dragon', new_dragon_path %>
